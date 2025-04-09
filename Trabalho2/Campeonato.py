@@ -3,22 +3,22 @@ from typing import Literal
 categorias = Literal["infantil", "juvenil", "adulto"]
 
 class Pessoa():
-    idade: int
-    categoria: categorias
-    tempo: int
-    termo: bool
+    __idade: int
+    __categoria: categorias
+    __tempo: int
+    __termo: bool
 
     def __init__(self, idade: int, categoria: categorias, tempo: int, termo: bool):
-        self.categoria = categoria
-        self.idade = idade
-        self.tempo = tempo
-        self.termo = termo
+        self.__categoria = categoria
+        self.__idade = idade
+        self.__tempo = tempo
+        self.__termo = termo
 
-def registro_pessoa(pessoa: Pessoa) -> bool:
-    if pessoa.idade < 10 or pessoa.idade > 60: return False
-    if pessoa.categoria not in categorias: return False
-    if pessoa.categoria == "infantil" and pessoa.idade > 14: return False
-    if pessoa.categoria == "juvenil" and (pessoa.idade < 15 or pessoa.idade > 17): return False
-    if pessoa.categoria == "adulto" and pessoa.idade < 18: return False
-    if pessoa.tempo < 30 or pessoa.tempo > 180: return False
-    return pessoa.termo
+    def registro_pessoa(self) -> bool:
+        if self.__idade < 10 or self.__idade > 60: return False
+        if self.__categoria not in categorias: return False
+        if self.__categoria == "infantil" and self.__idade > 14: return False
+        if self.__categoria == "juvenil" and (self.__idade < 15 or self.__idade > 17): return False
+        if self.__categoria == "adulto" and self.__idade < 18: return False
+        if self.__tempo < 30 or self.__tempo > 180: return False
+        return self.__termo
