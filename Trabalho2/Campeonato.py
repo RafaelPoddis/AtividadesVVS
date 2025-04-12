@@ -17,7 +17,7 @@ class Pessoa():
 
     def registro_pessoa(self) -> bool:
         if self.__idade < 10 or self.__idade > 60: return False
-        if self.__categoria not in categorias: return False
+        if self.__categoria not in categorias_real: return False
         if self.__categoria == "infantil" and self.__idade > 14: return False
         if self.__categoria == "juvenil" and self.__idade < 15: return False
         if self.__categoria == "juvenil" and self.__idade > 17: return False
