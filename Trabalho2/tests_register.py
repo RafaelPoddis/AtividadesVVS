@@ -40,4 +40,3 @@ def test_document_not_signed():
     registro = pessoa.registro_pessoa()
     
     assert not registro
-    

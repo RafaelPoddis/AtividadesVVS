@@ -1,7 +1,7 @@
 """
 Trabalho 3 feito em grupo por:
 João Paulo Paixão Rocha          RA 156408
-Rafael Poddis
+Rafael Poddis Busquim e Silva    RA 159329
 Thiago Cortez Cursino dos Santos RA 163997
 """
 
