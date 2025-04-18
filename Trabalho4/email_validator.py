@@ -1,15 +1,22 @@
 import re
 
+"""
+Os ifs testados nas linhas 22, 17, 14 e 25 não podem ser verificas pois os testes não estão corretos.
+Esses testes realizam as mesmas verificações 2 vezes, ou seja, mesmo que o mutatest troque um if para false, 
+a segunda verificação vai continuar falhando. Sem alterar essas estruturas no código, não há como aumentar a cobertura 
+das mutações.
+"""
 def validate(email):
+    
     if not email or not isinstance(email, str):
-        return False
-
-    if len(email) > 320:
         return False
 
     if '@' not in email or email.count('@') != 1:
         return False
 
+    if len(email) > 320:
+        return False
+    
     local_part, domain = email.split('@')
 
     if not local_part or not domain:
@@ -25,6 +32,7 @@ def validate(email):
     # Domain part rules
     domain_labels = domain.split('.')
     if any(len(label) > 63 for label in domain_labels):
+        print("I was here")
         return False
 
     # Use a safe regex to confirm valid characters and structure
@@ -36,5 +44,6 @@ def validate(email):
 
     if not re.match(domain_pattern, domain):
         return False
+    
 
     return True

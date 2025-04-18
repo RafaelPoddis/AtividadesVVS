@@ -1,0 +1,249 @@
+2025-04-17 22:32:31,591: Running clean trial
+============================= test session starts ==============================
+platform linux -- Python 3.9.22, pytest-8.3.5, pluggy-1.5.0
+rootdir: /mnt/d/Codes/VVS/AtividadesVVS/Trabalho4
+collected 21 items
+
+email_validator_test.py .....................                            [100%]
+
+============================== 21 passed in 0.08s ==============================
+2025-04-17 22:32:32,253: [92m32 mutation targets found in email_validator.py AST.[0m
+2025-04-17 22:32:32,254: Setting random.seed to: 314
+2025-04-17 22:32:32,255: Coverage file does not exist, proceeding to sample from all targets.
+2025-04-17 22:32:32,255: Total sample space size: 32
+2025-04-17 22:32:32,255: [92mSelecting 32 locations from 32 potentials.[0m
+2025-04-17 22:32:32,255: Starting individual mutation trials!
+2025-04-17 22:32:32,256: Running serial (single processor) dispatch mode.
+2025-04-17 22:32:32,256: Current target location: email_validator.py, LocIndex(ast_class='BoolOp', lineno=22, col_offset=7, op_type=<class 'ast.Or'>, end_lineno=22, end_col_offset=35)
+2025-04-17 22:32:32,917: [91mResult: Survived at email_validator.py: (22, 7)[0m
+2025-04-17 22:32:32,918: [91mBreak on survival: stopping further mutations at location.[0m
+2025-04-17 22:32:32,918: Current target location: email_validator.py, LocIndex(ast_class='If', lineno=25, col_offset=4, op_type='If_Statement', end_lineno=26, end_col_offset=20)
+2025-04-17 22:32:33,855: [92mResult: Detected at email_validator.py: (25, 4)[0m
+2025-04-17 22:32:34,772: [92mResult: Detected at email_validator.py: (25, 4)[0m
+2025-04-17 22:32:34,773: Current target location: email_validator.py, LocIndex(ast_class='If', lineno=14, col_offset=4, op_type='If_Statement', end_lineno=15, end_col_offset=20)
+2025-04-17 22:32:35,642: [92mResult: Detected at email_validator.py: (14, 4)[0m
+2025-04-17 22:32:36,530: [92mResult: Detected at email_validator.py: (14, 4)[0m
+2025-04-17 22:32:36,530: Current target location: email_validator.py, LocIndex(ast_class='BoolOp', lineno=14, col_offset=7, op_type=<class 'ast.Or'>, end_lineno=14, end_col_offset=48)
+2025-04-17 22:32:37,383: [92mResult: Detected at email_validator.py: (14, 7)[0m
+2025-04-17 22:32:37,384: Current target location: email_validator.py, LocIndex(ast_class='If', lineno=11, col_offset=4, op_type='If_Statement', end_lineno=12, end_col_offset=20)
+2025-04-17 22:32:38,311: [92mResult: Detected at email_validator.py: (11, 4)[0m
+2025-04-17 22:32:39,370: [92mResult: Detected at email_validator.py: (11, 4)[0m
+2025-04-17 22:32:39,370: Current target location: email_validator.py, LocIndex(ast_class='CompareIn', lineno=29, col_offset=7, op_type=<class 'ast.In'>, end_lineno=29, end_col_offset=25)
+2025-04-17 22:32:40,334: [92mResult: Detected at email_validator.py: (29, 7)[0m
+2025-04-17 22:32:40,334: Current target location: email_validator.py, LocIndex(ast_class='NameConstant', lineno=36, col_offset=15, op_type=False, end_lineno=36, end_col_offset=20)
+2025-04-17 22:32:44,821: [92mResult: Detected at email_validator.py: (36, 15)[0m
+2025-04-17 22:32:45,418: [91mResult: Survived at email_validator.py: (36, 15)[0m
+2025-04-17 22:32:45,419: [91mBreak on survival: stopping further mutations at location.[0m
+2025-04-17 22:32:45,419: Current target location: email_validator.py, LocIndex(ast_class='Compare', lineno=17, col_offset=7, op_type=<class 'ast.Gt'>, end_lineno=17, end_col_offset=23)
+2025-04-17 22:32:46,325: [92mResult: Detected at email_validator.py: (17, 7)[0m
+2025-04-17 22:32:47,242: [92mResult: Detected at email_validator.py: (17, 7)[0m
+2025-04-17 22:32:48,180: [92mResult: Detected at email_validator.py: (17, 7)[0m
+2025-04-17 22:32:49,101: [92mResult: Detected at email_validator.py: (17, 7)[0m
+2025-04-17 22:32:50,091: [92mResult: Detected at email_validator.py: (17, 7)[0m
+2025-04-17 22:32:50,092: Current target location: email_validator.py, LocIndex(ast_class='NameConstant', lineno=15, col_offset=15, op_type=False, end_lineno=15, end_col_offset=20)
+2025-04-17 22:32:51,055: [92mResult: Detected at email_validator.py: (15, 15)[0m
+2025-04-17 22:32:51,673: [91mResult: Survived at email_validator.py: (15, 15)[0m
+2025-04-17 22:32:51,674: [91mBreak on survival: stopping further mutations at location.[0m
+2025-04-17 22:32:51,674: Current target location: email_validator.py, LocIndex(ast_class='NameConstant', lineno=49, col_offset=11, op_type=True, end_lineno=49, end_col_offset=15)
+2025-04-17 22:32:52,586: [92mResult: Detected at email_validator.py: (49, 11)[0m
+2025-04-17 22:32:53,483: [92mResult: Detected at email_validator.py: (49, 11)[0m
+2025-04-17 22:32:53,483: Current target location: email_validator.py, LocIndex(ast_class='Compare', lineno=14, col_offset=27, op_type=<class 'ast.NotEq'>, end_lineno=14, end_col_offset=48)
+2025-04-17 22:32:54,399: [92mResult: Detected at email_validator.py: (14, 27)[0m
+2025-04-17 22:32:55,256: [92mResult: Detected at email_validator.py: (14, 27)[0m
+2025-04-17 22:32:55,850: [91mResult: Survived at email_validator.py: (14, 27)[0m
+2025-04-17 22:32:55,851: [91mBreak on survival: stopping further mutations at location.[0m
+2025-04-17 22:32:55,851: Current target location: email_validator.py, LocIndex(ast_class='CompareIn', lineno=29, col_offset=57, op_type=<class 'ast.In'>, end_lineno=29, end_col_offset=74)
+2025-04-17 22:32:56,794: [92mResult: Detected at email_validator.py: (29, 57)[0m
+2025-04-17 22:32:56,795: Current target location: email_validator.py, LocIndex(ast_class='Compare', lineno=25, col_offset=31, op_type=<class 'ast.Gt'>, end_lineno=25, end_col_offset=48)
+2025-04-17 22:32:57,701: [92mResult: Detected at email_validator.py: (25, 31)[0m
+2025-04-17 22:32:58,689: [92mResult: Detected at email_validator.py: (25, 31)[0m
+2025-04-17 22:32:59,642: [92mResult: Detected at email_validator.py: (25, 31)[0m
+2025-04-17 22:33:00,727: [92mResult: Detected at email_validator.py: (25, 31)[0m
+2025-04-17 22:33:01,778: [92mResult: Detected at email_validator.py: (25, 31)[0m
+2025-04-17 22:33:01,778: Current target location: email_validator.py, LocIndex(ast_class='NameConstant', lineno=46, col_offset=15, op_type=False, end_lineno=46, end_col_offset=20)
+2025-04-17 22:33:02,700: [92mResult: Detected at email_validator.py: (46, 15)[0m
+2025-04-17 22:33:03,369: [91mResult: Survived at email_validator.py: (46, 15)[0m
+2025-04-17 22:33:03,369: [91mBreak on survival: stopping further mutations at location.[0m
+2025-04-17 22:33:03,369: Current target location: email_validator.py, LocIndex(ast_class='BoolOp', lineno=11, col_offset=7, op_type=<class 'ast.Or'>, end_lineno=11, end_col_offset=46)
+2025-04-17 22:33:04,416: [92mResult: Detected at email_validator.py: (11, 7)[0m
+2025-04-17 22:33:04,416: Current target location: email_validator.py, LocIndex(ast_class='NameConstant', lineno=43, col_offset=15, op_type=False, end_lineno=43, end_col_offset=20)
+2025-04-17 22:33:05,353: [92mResult: Detected at email_validator.py: (43, 15)[0m
+2025-04-17 22:33:05,970: [91mResult: Survived at email_validator.py: (43, 15)[0m
+2025-04-17 22:33:05,970: [91mBreak on survival: stopping further mutations at location.[0m
+2025-04-17 22:33:05,970: Current target location: email_validator.py, LocIndex(ast_class='CompareIn', lineno=14, col_offset=7, op_type=<class 'ast.NotIn'>, end_lineno=14, end_col_offset=23)
+2025-04-17 22:33:06,914: [92mResult: Detected at email_validator.py: (14, 7)[0m
+2025-04-17 22:33:06,915: Current target location: email_validator.py, LocIndex(ast_class='If', lineno=29, col_offset=4, op_type='If_Statement', end_lineno=30, end_col_offset=20)
+2025-04-17 22:33:08,048: [92mResult: Detected at email_validator.py: (29, 4)[0m
+2025-04-17 22:33:09,008: [92mResult: Detected at email_validator.py: (29, 4)[0m
+2025-04-17 22:33:09,008: Current target location: email_validator.py, LocIndex(ast_class='NameConstant', lineno=23, col_offset=15, op_type=False, end_lineno=23, end_col_offset=20)
+2025-04-17 22:33:09,927: [92mResult: Detected at email_validator.py: (23, 15)[0m
+2025-04-17 22:33:10,599: [91mResult: Survived at email_validator.py: (23, 15)[0m
+2025-04-17 22:33:10,600: [91mBreak on survival: stopping further mutations at location.[0m
+2025-04-17 22:33:10,600: Current target location: email_validator.py, LocIndex(ast_class='If', lineno=45, col_offset=4, op_type='If_Statement', end_lineno=46, end_col_offset=20)
+2025-04-17 22:33:11,659: [92mResult: Detected at email_validator.py: (45, 4)[0m
+2025-04-17 22:33:12,676: [92mResult: Detected at email_validator.py: (45, 4)[0m
+2025-04-17 22:33:12,676: Current target location: email_validator.py, LocIndex(ast_class='If', lineno=42, col_offset=4, op_type='If_Statement', end_lineno=43, end_col_offset=20)
+2025-04-17 22:33:13,591: [92mResult: Detected at email_validator.py: (42, 4)[0m
+2025-04-17 22:33:14,518: [92mResult: Detected at email_validator.py: (42, 4)[0m
+2025-04-17 22:33:14,518: Current target location: email_validator.py, LocIndex(ast_class='Compare', lineno=34, col_offset=11, op_type=<class 'ast.Gt'>, end_lineno=34, end_col_offset=26)
+2025-04-17 22:33:15,454: [92mResult: Detected at email_validator.py: (34, 11)[0m
+2025-04-17 22:33:16,375: [92mResult: Detected at email_validator.py: (34, 11)[0m
+2025-04-17 22:33:20,888: [92mResult: Detected at email_validator.py: (34, 11)[0m
+2025-04-17 22:33:21,825: [92mResult: Detected at email_validator.py: (34, 11)[0m
+2025-04-17 22:33:22,890: [92mResult: Detected at email_validator.py: (34, 11)[0m
+2025-04-17 22:33:22,890: Current target location: email_validator.py, LocIndex(ast_class='If', lineno=34, col_offset=4, op_type='If_Statement', end_lineno=36, end_col_offset=20)
+2025-04-17 22:33:23,953: [92mResult: Detected at email_validator.py: (34, 4)[0m
+2025-04-17 22:33:24,930: [92mResult: Detected at email_validator.py: (34, 4)[0m
+2025-04-17 22:33:24,930: Current target location: email_validator.py, LocIndex(ast_class='Compare', lineno=25, col_offset=7, op_type=<class 'ast.Gt'>, end_lineno=25, end_col_offset=27)
+2025-04-17 22:33:25,978: [92mResult: Detected at email_validator.py: (25, 7)[0m
+2025-04-17 22:33:26,990: [92mResult: Detected at email_validator.py: (25, 7)[0m
+2025-04-17 22:33:28,126: [92mResult: Detected at email_validator.py: (25, 7)[0m
+2025-04-17 22:33:29,153: [92mResult: Detected at email_validator.py: (25, 7)[0m
+2025-04-17 22:33:30,085: [92mResult: Detected at email_validator.py: (25, 7)[0m
+2025-04-17 22:33:30,085: Current target location: email_validator.py, LocIndex(ast_class='If', lineno=22, col_offset=4, op_type='If_Statement', end_lineno=23, end_col_offset=20)
+2025-04-17 22:33:31,064: [92mResult: Detected at email_validator.py: (22, 4)[0m
+2025-04-17 22:33:31,688: [91mResult: Survived at email_validator.py: (22, 4)[0m
+2025-04-17 22:33:31,688: [91mBreak on survival: stopping further mutations at location.[0m
+2025-04-17 22:33:31,688: Current target location: email_validator.py, LocIndex(ast_class='NameConstant', lineno=26, col_offset=15, op_type=False, end_lineno=26, end_col_offset=20)
+2025-04-17 22:33:32,343: [91mResult: Survived at email_validator.py: (26, 15)[0m
+2025-04-17 22:33:32,343: [91mBreak on survival: stopping further mutations at location.[0m
+2025-04-17 22:33:32,343: Current target location: email_validator.py, LocIndex(ast_class='BoolOp', lineno=29, col_offset=7, op_type=<class 'ast.Or'>, end_lineno=29, end_col_offset=74)
+2025-04-17 22:33:33,290: [92mResult: Detected at email_validator.py: (29, 7)[0m
+2025-04-17 22:33:33,291: Current target location: email_validator.py, LocIndex(ast_class='NameConstant', lineno=12, col_offset=15, op_type=False, end_lineno=12, end_col_offset=20)
+2025-04-17 22:33:34,240: [92mResult: Detected at email_validator.py: (12, 15)[0m
+2025-04-17 22:33:34,856: [91mResult: Survived at email_validator.py: (12, 15)[0m
+2025-04-17 22:33:34,857: [91mBreak on survival: stopping further mutations at location.[0m
+2025-04-17 22:33:34,857: Current target location: email_validator.py, LocIndex(ast_class='If', lineno=17, col_offset=4, op_type='If_Statement', end_lineno=18, end_col_offset=20)
+2025-04-17 22:33:35,500: [91mResult: Survived at email_validator.py: (17, 4)[0m
+2025-04-17 22:33:35,501: [91mBreak on survival: stopping further mutations at location.[0m
+2025-04-17 22:33:35,501: Current target location: email_validator.py, LocIndex(ast_class='BoolOp', lineno=25, col_offset=7, op_type=<class 'ast.Or'>, end_lineno=25, end_col_offset=48)
+2025-04-17 22:33:36,513: [92mResult: Detected at email_validator.py: (25, 7)[0m
+2025-04-17 22:33:36,514: Current target location: email_validator.py, LocIndex(ast_class='NameConstant', lineno=30, col_offset=15, op_type=False, end_lineno=30, end_col_offset=20)
+2025-04-17 22:33:37,529: [92mResult: Detected at email_validator.py: (30, 15)[0m
+2025-04-17 22:33:38,167: [91mResult: Survived at email_validator.py: (30, 15)[0m
+2025-04-17 22:33:38,167: [91mBreak on survival: stopping further mutations at location.[0m
+2025-04-17 22:33:38,167: Current target location: email_validator.py, LocIndex(ast_class='NameConstant', lineno=18, col_offset=15, op_type=False, end_lineno=18, end_col_offset=20)
+2025-04-17 22:33:39,101: [92mResult: Detected at email_validator.py: (18, 15)[0m
+2025-04-17 22:33:39,748: [91mResult: Survived at email_validator.py: (18, 15)[0m
+2025-04-17 22:33:39,749: [91mBreak on survival: stopping further mutations at location.[0m
+2025-04-17 22:33:39,751: Running clean trial
+============================= test session starts ==============================
+platform linux -- Python 3.9.22, pytest-8.3.5, pluggy-1.5.0
+rootdir: /mnt/d/Codes/VVS/AtividadesVVS/Trabalho4
+collected 21 items
+
+email_validator_test.py .....................                            [100%]
+
+============================== 21 passed in 0.06s ==============================
+2025-04-17 22:33:40,367: CLI Report:
+
+Mutatest diagnostic summary
+===========================
+ - Source location: /mnt/d/Codes/VVS/AtividadesVVS/Trabalho4/email_validator.py
+ - Test commands: ['pytest']
+ - Mode: s
+ - Excluded files: []
+ - N locations input: 32
+ - Random seed: 314
+
+Random sample details
+---------------------
+ - Total locations mutated: 32
+ - Total locations identified: 32
+ - Location sample coverage: 100.00 %
+
+
+Running time details
+--------------------
+ - Clean trial 1 run time: 0:00:00.658618
+ - Clean trial 2 run time: 0:00:00.614964
+ - Mutation trials total run time: 0:01:07.498500
+
+2025-04-17 22:33:40,368: Trial Summary Report:
+
+Overall mutation trial summary
+==============================
+ - SURVIVED: 13
+ - DETECTED: 54
+ - TOTAL RUNS: 67
+ - RUN DATETIME: 2025-04-17 22:33:40.367545
+
+2025-04-17 22:33:40,368: Detected mutations:[92m
+
+DETECTED
+--------
+ - email_validator.py: (l: 11, c: 4) - mutation from If_Statement to If_False
+ - email_validator.py: (l: 11, c: 4) - mutation from If_Statement to If_True
+ - email_validator.py: (l: 11, c: 7) - mutation from <class 'ast.Or'> to <class 'ast.And'>
+ - email_validator.py: (l: 12, c: 15) - mutation from False to True
+ - email_validator.py: (l: 14, c: 4) - mutation from If_Statement to If_False
+ - email_validator.py: (l: 14, c: 4) - mutation from If_Statement to If_True
+ - email_validator.py: (l: 14, c: 7) - mutation from <class 'ast.Or'> to <class 'ast.And'>
+ - email_validator.py: (l: 14, c: 7) - mutation from <class 'ast.NotIn'> to <class 'ast.In'>
+ - email_validator.py: (l: 14, c: 27) - mutation from <class 'ast.NotEq'> to <class 'ast.Eq'>
+ - email_validator.py: (l: 14, c: 27) - mutation from <class 'ast.NotEq'> to <class 'ast.Lt'>
+ - email_validator.py: (l: 15, c: 15) - mutation from False to True
+ - email_validator.py: (l: 17, c: 7) - mutation from <class 'ast.Gt'> to <class 'ast.NotEq'>
+ - email_validator.py: (l: 17, c: 7) - mutation from <class 'ast.Gt'> to <class 'ast.Eq'>
+ - email_validator.py: (l: 17, c: 7) - mutation from <class 'ast.Gt'> to <class 'ast.Lt'>
+ - email_validator.py: (l: 17, c: 7) - mutation from <class 'ast.Gt'> to <class 'ast.LtE'>
+ - email_validator.py: (l: 17, c: 7) - mutation from <class 'ast.Gt'> to <class 'ast.GtE'>
+ - email_validator.py: (l: 18, c: 15) - mutation from False to True
+ - email_validator.py: (l: 22, c: 4) - mutation from If_Statement to If_True
+ - email_validator.py: (l: 23, c: 15) - mutation from False to True
+ - email_validator.py: (l: 25, c: 4) - mutation from If_Statement to If_False
+ - email_validator.py: (l: 25, c: 4) - mutation from If_Statement to If_True
+ - email_validator.py: (l: 25, c: 7) - mutation from <class 'ast.Gt'> to <class 'ast.Eq'>
+ - email_validator.py: (l: 25, c: 7) - mutation from <class 'ast.Gt'> to <class 'ast.NotEq'>
+ - email_validator.py: (l: 25, c: 7) - mutation from <class 'ast.Gt'> to <class 'ast.LtE'>
+ - email_validator.py: (l: 25, c: 7) - mutation from <class 'ast.Gt'> to <class 'ast.Lt'>
+ - email_validator.py: (l: 25, c: 7) - mutation from <class 'ast.Gt'> to <class 'ast.GtE'>
+ - email_validator.py: (l: 25, c: 7) - mutation from <class 'ast.Or'> to <class 'ast.And'>
+ - email_validator.py: (l: 25, c: 31) - mutation from <class 'ast.Gt'> to <class 'ast.Eq'>
+ - email_validator.py: (l: 25, c: 31) - mutation from <class 'ast.Gt'> to <class 'ast.NotEq'>
+ - email_validator.py: (l: 25, c: 31) - mutation from <class 'ast.Gt'> to <class 'ast.GtE'>
+ - email_validator.py: (l: 25, c: 31) - mutation from <class 'ast.Gt'> to <class 'ast.Lt'>
+ - email_validator.py: (l: 25, c: 31) - mutation from <class 'ast.Gt'> to <class 'ast.LtE'>
+ - email_validator.py: (l: 29, c: 4) - mutation from If_Statement to If_True
+ - email_validator.py: (l: 29, c: 4) - mutation from If_Statement to If_False
+ - email_validator.py: (l: 29, c: 7) - mutation from <class 'ast.In'> to <class 'ast.NotIn'>
+ - email_validator.py: (l: 29, c: 7) - mutation from <class 'ast.Or'> to <class 'ast.And'>
+ - email_validator.py: (l: 29, c: 57) - mutation from <class 'ast.In'> to <class 'ast.NotIn'>
+ - email_validator.py: (l: 30, c: 15) - mutation from False to True
+ - email_validator.py: (l: 34, c: 4) - mutation from If_Statement to If_True
+ - email_validator.py: (l: 34, c: 4) - mutation from If_Statement to If_False
+ - email_validator.py: (l: 34, c: 11) - mutation from <class 'ast.Gt'> to <class 'ast.Lt'>
+ - email_validator.py: (l: 34, c: 11) - mutation from <class 'ast.Gt'> to <class 'ast.GtE'>
+ - email_validator.py: (l: 34, c: 11) - mutation from <class 'ast.Gt'> to <class 'ast.NotEq'>
+ - email_validator.py: (l: 34, c: 11) - mutation from <class 'ast.Gt'> to <class 'ast.LtE'>
+ - email_validator.py: (l: 34, c: 11) - mutation from <class 'ast.Gt'> to <class 'ast.Eq'>
+ - email_validator.py: (l: 36, c: 15) - mutation from False to True
+ - email_validator.py: (l: 42, c: 4) - mutation from If_Statement to If_False
+ - email_validator.py: (l: 42, c: 4) - mutation from If_Statement to If_True
+ - email_validator.py: (l: 43, c: 15) - mutation from False to True
+ - email_validator.py: (l: 45, c: 4) - mutation from If_Statement to If_True
+ - email_validator.py: (l: 45, c: 4) - mutation from If_Statement to If_False
+ - email_validator.py: (l: 46, c: 15) - mutation from False to True
+ - email_validator.py: (l: 49, c: 11) - mutation from True to None
+ - email_validator.py: (l: 49, c: 11) - mutation from True to False[0m
+
+2025-04-17 22:33:40,368: Timedout mutations:
+
+2025-04-17 22:33:40,368: Surviving mutations:[91m
+
+SURVIVED
+--------
+ - email_validator.py: (l: 12, c: 15) - mutation from False to None
+ - email_validator.py: (l: 14, c: 27) - mutation from <class 'ast.NotEq'> to <class 'ast.Gt'>
+ - email_validator.py: (l: 15, c: 15) - mutation from False to None
+ - email_validator.py: (l: 17, c: 4) - mutation from If_Statement to If_False
+ - email_validator.py: (l: 18, c: 15) - mutation from False to None
+ - email_validator.py: (l: 22, c: 4) - mutation from If_Statement to If_False
+ - email_validator.py: (l: 22, c: 7) - mutation from <class 'ast.Or'> to <class 'ast.And'>
+ - email_validator.py: (l: 23, c: 15) - mutation from False to None
+ - email_validator.py: (l: 26, c: 15) - mutation from False to None
+ - email_validator.py: (l: 30, c: 15) - mutation from False to None
+ - email_validator.py: (l: 36, c: 15) - mutation from False to None
+ - email_validator.py: (l: 43, c: 15) - mutation from False to None
+ - email_validator.py: (l: 46, c: 15) - mutation from False to None[0m
+
