@@ -4,9 +4,7 @@ from src.domain.model import Movie
 from src.domain.errors import DuplicateMovieId
 
 def test_must_have_unique_id():
-    
-    Movie.clear_ids()
-    
+        
     movie1 = Movie("The Matrix", 1, 136)
     assert movie1.movie_id == 1
     
@@ -14,9 +12,7 @@ def test_must_have_unique_id():
         movie2 = Movie("Avatar", 1, 162)
 
 def test_must_get_formatted_duration():
-    
-    Movie.clear_ids()
-    
+       
     movie1 = Movie("Movie 1", 1, 120)
     assert movie1.get_formatted_duration() == "2h0min"
     
@@ -30,9 +26,7 @@ def test_must_get_formatted_duration():
     assert movie4.get_formatted_duration() == "1h0min"
 
 def test_must_get_duration_as_timedelta():
-    
-    Movie.clear_ids()
-    
+        
     movie1 = Movie("Movie 1", 1, 120)
     duration = movie1.get_duration_as_timedelta()
     expected = timedelta(minutes=120)

@@ -1,6 +1,6 @@
 from src.domain.errors import DuplicateRoomName, DuplicateMovieId
 from dataclasses import dataclass, field
-from datetime import time
+from datetime import timedelta
 from enum import Enum
 
 class SeatStatus(Enum):
@@ -114,7 +114,7 @@ class Movie:
     def get_duration_as_timedelta(self):
         horas: int = self.duration // 60
         minutes: int = self.duration % 60
-        return time(horas, minutes, 0)
+        return timedelta(horas, minutes, 0)
 
     def duplicate_movie_id(self, movie_id):
         return [theater_room for theater_room in self.movie_id if theater_room == movie_id]
