@@ -97,24 +97,28 @@ class Theater:
 class Movie:
     name: str
     duration: int
-    movie_id: list[int] = field(default_factory=list)
+    movie_id: int
+
+    _existing_ids = set()
 
     def __init__(self, name, movie_id, duration):
+        if movie_id in Movie._existing_ids:
+            raise DuplicateMovieId
+        
         self.name = name
-        if self.duplicate_movie_id(movie_id):
-            raise DuplicateMovieId()
         self.movie_id = movie_id
         self.duration = duration
+        Movie._existing_ids.add(movie_id)
 
     def get_formatted_duration(self) -> str:
         horas: int = self.duration // 60
         minutes: int = self.duration % 60
         return f"{horas}h{minutes}min"
     
-    def get_duration_as_timedelta(self):
+    def get_duration_as_timedelta(self) -> timedelta:
         horas: int = self.duration // 60
         minutes: int = self.duration % 60
-        return timedelta(horas, minutes, 0)
+        return timedelta(minutes=self.duration)
 
     def duplicate_movie_id(self, movie_id):
         return [theater_room for theater_room in self.movie_id if theater_room == movie_id]
