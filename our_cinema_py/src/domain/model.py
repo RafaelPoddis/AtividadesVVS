@@ -122,3 +122,5 @@ class Movie:
 
     def duplicate_movie_id(self, movie_id):
         return [theater_room for theater_room in self.movie_id if theater_room == movie_id]
+    
+    
