@@ -1,7 +1,7 @@
-from src.domain.errors import DuplicateRoomName, DuplicateMovieId
 from dataclasses import dataclass, field
-from datetime import timedelta
 from enum import Enum
+from src.domain.errors import DuplicateRoomName
+from datetime import datetime, timedelta
 
 class SeatStatus(Enum):
     AVAILABLE = "available"
@@ -34,6 +34,8 @@ class Seat:
         self.status = SeatStatus.AVAILABLE
 
     
+ASCII_CODE_FOR_A = 65
+
 @dataclass
 class Room:
     name: str
@@ -45,15 +47,15 @@ class Room:
         if seats is None:
             self.create_list_of_seats()
             return
-        i = 65
+        row_code = ASCII_CODE_FOR_A
         for row in seats:
             row_seats = []
-            row_name = chr(i)
+            row_name = chr(row_code)
             for j in range(row):
                 seat = Seat(row=row_name, number=j+1)
                 row_seats.append(seat)
             self.rows.append(row_seats)
-            i += 1
+            row_code += 1
 
     def create_list_of_seats(self):
         for i in range(10):
@@ -77,6 +79,16 @@ class Room:
                 if seat.is_available:
                     available_seats += 1
         return available_seats
+
+    def reserve_seat(self, row_index: int, seat_index: int) -> bool:
+        self.rows[row_index][seat_index].reserve()
+
+        return self.rows[row_index][seat_index].confirm()
+            
+    def check_if_seat_is_available(self, seat_index: int, row_index: int) -> bool:
+
+        return self.rows[row_index][seat_index].is_available
+        
     
 @dataclass
 class Theater:
@@ -84,7 +96,7 @@ class Theater:
 
     def add(self, room):
         if self.duplicate_room_name(room):
-            raise DuplicateRoomName()
+            raise DuplicateRoomName
         self.rooms.append(room)
 
     def remove(self, room):
@@ -92,35 +104,34 @@ class Theater:
 
     def duplicate_room_name(self, room):
         return [theater_room for theater_room in self.rooms if theater_room.name == room.name]
-
+    
 @dataclass
 class Movie:
-    name: str
+    title: str
+    genre: str
     duration: int
-    movie_id: int
 
-    _existing_ids = set()
-
-    def __init__(self, name, movie_id, duration):
-        if movie_id in Movie._existing_ids:
-            raise DuplicateMovieId
+    def formatted_duration(self):
+        hours = self.duration // 60
+        minutes = self.duration % 60
+        if minutes > 0 and hours > 0:
+            return f"{hours}h{minutes}min"
+        elif hours > 0:
+            return f"{hours}h"
+        else:
+            return f"{minutes}min"
         
-        self.name = name
-        self.movie_id = movie_id
-        self.duration = duration
-        Movie._existing_ids.add(movie_id)
-
-    def get_formatted_duration(self) -> str:
-        horas: int = self.duration // 60
-        minutes: int = self.duration % 60
-        return f"{horas}h{minutes}min"
-    
-    def get_duration_as_timedelta(self) -> timedelta:
-        horas: int = self.duration // 60
-        minutes: int = self.duration % 60
+    def get_duration_as_timedelta(self):
         return timedelta(minutes=self.duration)
+        
+@dataclass
+class Session:
+    room: Room
+    movie: Movie
+    start_time: datetime
 
-    def duplicate_movie_id(self, movie_id):
-        return [theater_room for theater_room in self.movie_id if theater_room == movie_id]
-    
-    
+    def end_time(self):
+        return self.start_time + self.movie.get_duration_as_timedelta()
+
+    def seat_available(self, seat_index: int, row_index: int) -> bool:
+        return self.room.check_if_seat_is_available(seat_index, row_index)
