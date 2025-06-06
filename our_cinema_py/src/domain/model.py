@@ -135,3 +135,11 @@ class Session:
 
     def seat_available(self, seat_index: int, row_index: int) -> bool:
         return self.room.check_if_seat_is_available(seat_index, row_index)
+
+    def get_all_available_seats(self):
+        return room.available_seats()
+
+# 5. Get all available seats
+# 6. Detect session overlap same room
+# 7. No overlap different rooms
+# 8. No overlap sequential sessions
