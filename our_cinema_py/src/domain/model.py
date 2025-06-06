@@ -164,5 +164,15 @@ class Session:
 
     def get_all_available_seats(self):
         return self.room.available_seats()
+    
+    
+    #mock nao funcionou
+    def release_room_when_finished(self, current_time: datetime):
 
+
+        if self.end_time() <= current_time:
+            self.room.release()
+        
+        return
+    
 # 6. Detect session overlap same room
