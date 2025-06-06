@@ -29,6 +29,7 @@ def test_seat_available():
 
 def test_all_available_seats():
     room = Room("1")
+    room.reserve_seat(1, 2)
 
     movie = MovieBuilder().aMovie().with_duration(90).build()
 
@@ -38,5 +39,11 @@ def test_all_available_seats():
     tomorrow_at_eight_thirty_pm = tomorrow.replace(hour=20, minute=30, second=0, microsecond=0)
 
     session = Session(room=room, movie=movie, start_time=tomorrow_at_seven_pm)
+    assert session.get_all_available_seats() == 99
 
-    
+    room.reserve_seat(1, 3)
+    room.reserve_seat(1, 4)
+    room.reserve_seat(1, 5)
+    assert session.get_all_available_seats() == 96
+
+
