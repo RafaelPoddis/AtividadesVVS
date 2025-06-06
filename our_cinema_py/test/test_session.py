@@ -25,4 +25,4 @@ def test_seat_available():
 
     session = Session(room=room, movie=movie, start_time=tomorrow_at_seven_pm)
     assert session.seat_available(1, 1) == True
-    assert session.seat_available(1, 2) == False
+    assert session.seat_available(2, 1) == False
