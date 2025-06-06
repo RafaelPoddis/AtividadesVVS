@@ -1,11 +1,15 @@
 from dataclasses import dataclass, field
 from enum import Enum
-from src.domain.errors import DuplicateRoomName
+from src.domain.errors import DuplicateRoomName, RoomOccupied
 from datetime import datetime, timedelta
 
 class SeatStatus(Enum):
     AVAILABLE = "available"
     RESERVED = "reserved"
+    OCCUPIED = "occupied"
+
+class RoomStatus(Enum):
+    AVAILABLE = "available"
     OCCUPIED = "occupied"
 
 @dataclass
@@ -40,6 +44,7 @@ ASCII_CODE_FOR_A = 65
 class Room:
     name: str
     rows: list[list[Seat]]
+    status: RoomStatus = RoomStatus.AVAILABLE
 
     def __init__(self, name, seats=None):
         self.name = name
@@ -56,6 +61,19 @@ class Room:
                 row_seats.append(seat)
             self.rows.append(row_seats)
             row_code += 1
+
+    @property
+    def is_available(self):
+        return self.status == RoomStatus.AVAILABLE
+    
+    def reserve(self):
+        if self.status == RoomStatus.AVAILABLE:
+            self.status = RoomStatus.OCCUPIED
+            return True
+        return False
+    
+    def release(self):
+        self.status = RoomStatus.AVAILABLE
 
     def create_list_of_seats(self):
         for i in range(10):
@@ -129,6 +147,14 @@ class Session:
     room: Room
     movie: Movie
     start_time: datetime
+
+    def __init__(self, room, movie, start_time):
+        self.room = room
+        self.movie = movie
+        self.start_time = start_time
+
+        if self.room.reserve() == False:
+            raise RoomOccupied
 
     def end_time(self):
         return self.start_time + self.movie.get_duration_as_timedelta()
