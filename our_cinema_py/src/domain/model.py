@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from enum import Enum
-from src.domain.errors import DuplicateRoomName, RoomOccupied
+from src.domain.errors import DuplicateRoomName, RoomOccupied, MovieNotFinished
 from datetime import datetime, timedelta
 
 class SeatStatus(Enum):
@@ -169,9 +169,11 @@ class Session:
     #mock nao funcionou
     def release_room_when_finished(self, current_time: datetime):
 
-
         if self.end_time() <= current_time:
             self.room.release()
+
+        else: 
+            raise MovieNotFinished
         
         return
     

@@ -6,3 +6,6 @@ class DuplicateMovieId(Exception):
 
 class RoomOccupied(Exception):
     pass
+
+class MovieNotFinished (Exception):
+    pass

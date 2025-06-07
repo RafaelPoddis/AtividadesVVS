@@ -1,7 +1,7 @@
 from test.builder.movie_builder import MovieBuilder
 from src.domain.model import Room, Session, RoomStatus
 from datetime import datetime, timedelta
-from src.domain.errors import RoomOccupied
+from src.domain.errors import RoomOccupied, MovieNotFinished
 from unittest.mock import patch
 import pytest
 
@@ -80,3 +80,18 @@ def test_release_room_when_session_is_finished():
     session1.release_room_when_finished(tomorrow_at_eight_forty_pm)
 
     assert session1.room.status == RoomStatus.AVAILABLE
+
+def test_release_room_with_movie_not_finished():
+    room = Room("1")
+
+    movie1 = MovieBuilder().aMovie().with_duration(90).build()
+
+    today = datetime.now()
+    tomorrow = today + timedelta(days=1)
+    tomorrow_at_seven_pm = tomorrow.replace(hour=19, minute=0, second=0, microsecond=0)
+    tomorrow_at_seven_forty_pm = tomorrow.replace(hour=19, minute=30, second=0, microsecond=0)
+    session1 = Session(room=room, movie=movie1, start_time=tomorrow_at_seven_pm)
+
+    with pytest.raises(MovieNotFinished):
+        session1.release_room_when_finished(tomorrow_at_seven_forty_pm)
+
