@@ -1,11 +1,11 @@
 class DuplicateRoomName(Exception):
     pass
 
-class DuplicateMovieId(Exception):
+class OverlappingSessionsOnSameRoom(Exception):
     pass
 
-class RoomOccupied(Exception):
+class SeatAlreadyReservedError(Exception):
     pass
 
-class MovieNotFinished (Exception):
+class SeatDoesNotExistInSessionError(Exception):
     pass
