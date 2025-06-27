@@ -1,4 +1,4 @@
-from src.domain.model import Room
+from domain.model import Room
 
 def test_create_room():
     room = Room("1")
